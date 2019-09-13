@@ -6,7 +6,9 @@ import com.percyvega.util.BibleVerseUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.List;
 
 public class Application {
@@ -25,12 +27,14 @@ public class Application {
             log.info("Database initialized with " + recordsInserted + " records.");
 
             BibleVerse randomBibleVerse = bibleVerseService.getRandomVerse();
-            log.info(randomBibleVerse);
+            log.info("Random verse: {}", BibleVerseUtil.verseWithReferencePrettyPrint(randomBibleVerse));
 
             List<BibleVerse> allVerses = bibleVerseService.getAllBibleVerses();
+            int i = 0;
             for (BibleVerse bibleVerse : allVerses) {
-                log.info(BibleVerseUtil.bibleVerseToString(bibleVerse));
+                log.info("Verse {} found in the database: {}", ++i, BibleVerseUtil.verseWithReferencePrettyPrint(bibleVerse));
             }
+
         } catch (SQLException ex) {
             log.error(ex.getMessage(), ex);
         }

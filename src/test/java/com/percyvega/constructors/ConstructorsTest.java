@@ -15,7 +15,7 @@ class ConstructorsTest {
     @Test
     void bibleVerse_constructor1() {
         BibleVerse bibleVerse = new BibleVerse();
-        log.info(BibleVerseUtil.bibleVerseToString(bibleVerse));
+        log.info(BibleVerseUtil.verseWithReferencePrettyPrint(bibleVerse));
 
         assertThat(bibleVerse.getBook()).isEqualTo(42);
         assertThat(bibleVerse.getChapter()).isEqualTo(3);
@@ -27,7 +27,7 @@ class ConstructorsTest {
     @Test
     void bibleVerse_constructor1_fromUtil() {
         BibleVerse bibleVerse = BibleVerseUtil.getDefaultVerse();
-        log.info(BibleVerseUtil.bibleVerseToString(bibleVerse));
+        log.info(BibleVerseUtil.verseWithReferencePrettyPrint(bibleVerse));
 
         assertThat(bibleVerse.getBook()).isEqualTo(42);
         assertThat(bibleVerse.getChapter()).isEqualTo(3);
@@ -39,7 +39,7 @@ class ConstructorsTest {
     @Test
     void bibleVerse_constructor2() {
         BibleVerse bibleVerse = new BibleVerse(1, 1, 1, "In the beginning, God created the heavens and the earth.");
-        log.info(BibleVerseUtil.bibleVerseToString(bibleVerse));
+        log.info(BibleVerseUtil.verseWithReferencePrettyPrint(bibleVerse));
 
         assertThat(bibleVerse.getBook()).isEqualTo(1);
         assertThat(bibleVerse.getChapter()).isEqualTo(1);

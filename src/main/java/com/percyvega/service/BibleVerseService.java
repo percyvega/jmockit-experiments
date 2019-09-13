@@ -14,9 +14,6 @@ public class BibleVerseService {
 
     private final Connection connection;
 
-    public static final boolean SUCCESSFUL = true;
-    public static final boolean FAILED = false;
-
     public BibleVerseService(Connection connection) {
         this.connection = connection;
     }
@@ -98,10 +95,10 @@ public class BibleVerseService {
             ResultSet resultSet = statement.executeQuery("SELECT * FROM VERSE");
             while (resultSet.next()) {
                 BibleVerse bibleVerse = new BibleVerse(
-                    resultSet.getInt("book"),
-                    resultSet.getInt("chapter"),
-                    resultSet.getInt("verse"),
-                    resultSet.getString("text"));
+                        resultSet.getInt("book"),
+                        resultSet.getInt("chapter"),
+                        resultSet.getInt("verse"),
+                        resultSet.getString("text"));
 
                 bibleVerses.add(bibleVerse);
             }

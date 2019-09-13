@@ -4,6 +4,8 @@ import com.percyvega.model.BibleVerse;
 
 public abstract class BibleVerseUtil {
 
+    public static final String VERSE_WITH_REFERENCE_SEPARATOR = " - ";
+
     private static String chapterVerseSeparator;
 
     private static String[] bookNames;
@@ -55,7 +57,7 @@ public abstract class BibleVerseUtil {
         return new BibleVerse();
     }
 
-    public static String bibleVerseToString(BibleVerse bibleVerse) {
-        return bibleVerse.getText() + " - " + BibleVerseUtil.getPrettyPrintReference(bibleVerse);
+    public static String verseWithReferencePrettyPrint(BibleVerse bibleVerse) {
+        return bibleVerse.getText() + VERSE_WITH_REFERENCE_SEPARATOR + getPrettyPrintReference(bibleVerse);
     }
 }

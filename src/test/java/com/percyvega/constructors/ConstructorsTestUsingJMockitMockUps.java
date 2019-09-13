@@ -29,7 +29,7 @@ class ConstructorsTestUsingJMockitMockUps {
         };
 
         BibleVerse bibleVerse = new BibleVerse();
-        log.info(BibleVerseUtil.bibleVerseToString(bibleVerse));
+        log.info(BibleVerseUtil.verseWithReferencePrettyPrint(bibleVerse));
 
         assertThat(bibleVerse.getBook()).isEqualTo(39);
         assertThat(bibleVerse.getChapter()).isEqualTo(1);
@@ -52,7 +52,7 @@ class ConstructorsTestUsingJMockitMockUps {
         };
 
         BibleVerse bibleVerse = BibleVerseUtil.getDefaultVerse();
-        log.info(BibleVerseUtil.bibleVerseToString(bibleVerse));
+        log.info(BibleVerseUtil.verseWithReferencePrettyPrint(bibleVerse));
 
         assertThat(bibleVerse.getBook()).isEqualTo(39);
         assertThat(bibleVerse.getChapter()).isEqualTo(1);
@@ -75,7 +75,7 @@ class ConstructorsTestUsingJMockitMockUps {
         };
 
         BibleVerse bibleVerse = new BibleVerse(0, 0, 0, null);
-        log.info(BibleVerseUtil.bibleVerseToString(bibleVerse));
+        log.info(BibleVerseUtil.verseWithReferencePrettyPrint(bibleVerse));
 
         assertThat(bibleVerse.getBook()).isEqualTo(39);
         assertThat(bibleVerse.getChapter()).isEqualTo(1);

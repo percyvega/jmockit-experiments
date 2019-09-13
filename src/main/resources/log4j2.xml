@@ -1,7 +1,8 @@
 <Configuration status="info">
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
-            <PatternLayout disableAnsi="false" pattern="%style{%date{DEFAULT}}{yellow} %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green}[%t] %message\n"/>
+            <PatternLayout disableAnsi="false"
+                           pattern="%style{%date{DEFAULT}}{yellow} %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green}[%t] %message\n"/>
         </Console>
     </Appenders>
     <Loggers>

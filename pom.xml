@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.percyvega</groupId>
-    <artifactId>test-mocks-experiments</artifactId>
+    <artifactId>jmockit-experiments</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>test-mocks-experiments</name>
+    <name>jmockit-experiments</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

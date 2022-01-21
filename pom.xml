@@ -21,7 +21,7 @@
         <junit-jupiter.version>5.5.2</junit-jupiter.version>
         <assertj-core.version>3.13.2</assertj-core.version>
         <jmockit.version>1.48</jmockit.version>
-        <h2.version>1.4.199</h2.version>
+        <h2.version>2.1.210</h2.version>
         <hamcrest-all.version>1.3</hamcrest-all.version>
     </properties>
 
